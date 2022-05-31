@@ -6,14 +6,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-         key: deps1-{{ .Branch }}-{{ cheksum "requeriments.txt"}}
+         key: deps1-{{ .Branch }}-{{ checksum "requeriments.txt"}}
       - run:
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requeriments.txt
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ cheksum "requeriments.txt"}}
+          key: deps1-{{ .Branch }}-{{ checksum "requeriments.txt"}}
           paths:
             - "venv"
       - run:
