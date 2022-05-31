@@ -1,5 +1,5 @@
 # Byte-cpopiled ? optimized / DLL files
-__pycahe__/
+__pycache__/
 *.py[cod]
 
 #Vitualenv
